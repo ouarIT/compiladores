@@ -69,7 +69,7 @@ public class Predictivo {
         } else if (preanalisis == '/') {
             try {
                 System.out.println("--- Entra al simbolo '/' ---");
-                empareja('*');
+                empareja('/');
                 exp();
                 termp();
             } catch (Exception e) {
