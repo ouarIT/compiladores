@@ -1,0 +1,33 @@
+INT i,j,n;
+INT aux,arr[10];
+
+DO{
+	SCAN n;
+}WHILE(n>100);
+
+FOR(i=0;i<n;i=i+1){
+	SCAN aux;
+	arr[i]=aux;
+}
+
+FOR(i=0;i<n;i=i+1){
+	PRINT arr[i];
+}
+
+i=0;
+
+DO{
+	FOR(j=i;j<n;j=j+1){
+		aux=0;
+		IF(arr[j]<arr[i]){
+			aux=arr[i];
+			arr[i]=arr[j];
+			arr[j]=aux;
+		}
+	}
+	i=i+1;
+}WHILE(i<n);
+
+FOR(i=0;i<n;i=i+1){
+	PRINT arr[i];
+}
