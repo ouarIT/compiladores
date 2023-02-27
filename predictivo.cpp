@@ -7,6 +7,15 @@
 // declara el uso de namespace std
 using namespace std;
 
+// declara las funciones
+void expr();
+void exprp();
+void term();
+void termp();
+void exp();
+void digito();
+void empareja(char c) throw(exception);
+
 int preanalisis;
 string sr;
 
@@ -238,8 +247,16 @@ void empareja(char c) throw(exception)
         try
         {
             cout << "-- entra a empareja -- " << endl;
-            preanalisis = sr[0];
-            sr = sr.substr(1);
+
+            if (sr.length() == 0)
+            {
+                preanalisis = '$';
+            }
+            else
+            {
+                preanalisis = sr[0];
+                sr = sr.substr(1);
+            }
             cout << "-- sale de empareja -- " << endl;
         }
         catch (const char *msg)
@@ -257,10 +274,10 @@ int main()
 {
     cout << "Ingrese la cadena a evaluar: ";
     cin >> sr;
+    cout << "llamaremos a la funcion E" << endl;
     preanalisis = sr[0];
     sr = sr.substr(1);
     expr();
     cout << "La cadena es valida" << endl;
-    // doasnflanf
     return 0;
 }

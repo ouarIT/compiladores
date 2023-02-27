@@ -13,7 +13,7 @@ public class Predictivo {
             sr = new StringReader(cad);
             preanalisis = sr.read();
         } catch (IOException e) {
-            System.out.println("Ecepcion de E/S : " + e);
+            System.out.println("Excepcion de E/S : " + e);
         }
     }
 
