@@ -38,7 +38,8 @@ int main()
         cout << "--- Inicia el analisis ---" << endl;
         preanalisis = sr[0];
         cout << "Valor de B: " << B() << endl;
-    }
+        cout << "--- Finaliza el analisis ---" << endl;
+        }
 
     return 0;
 }
