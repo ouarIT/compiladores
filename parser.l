@@ -9,6 +9,10 @@
 (<|>)         printf("Condicion: [%s] ", yytext);
 (=|\+)         printf("Aritmetico: [%s] ", yytext);
 [0-9]+                  printf("numero: [%s] ", yytext);
+[a-zA-Z_][a-zA-Z0-9_]*  printf("identificador: [%s] ", yytext);
+(\/\*([^*]|[\r\n]|(\*+([^*/]|[\r\n])))*\*+\/) printf("Comentario: [%s] ", yytext);
+(\(|\)|\{|\}|\[|\])     printf("Delimitador: [%s] ", yytext);
+[ \t\n]                 ;
 %%
 int yywrap() { return 1; }
 

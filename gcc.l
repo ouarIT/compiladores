@@ -3,7 +3,7 @@
 #include <y.tab.h>
 %}
 %%
-[0-9] {yylval = atoi(yytext); return NUM;}
+[0-9]+ {yylval = atoi(yytext); return NUM;}
 ";" {return COMA;}
 "+" {return SUMA;}
 "-" {return RES;}
