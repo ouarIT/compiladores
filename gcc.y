@@ -12,13 +12,13 @@ ops:
     | ops e COMA
     ;
 e:
-    e SUM { printf(" + "); } t
-    | e RES { printf(" - "); } t
+    SUM e t { printf(" + "); } 
+    | RES e t { printf(" - "); } 
     | t
     ;
 t:
-    t MUL { printf(" * "); } f
-    | t DIV { printf(" / "); } f
+    MUL t f { printf(" * "); } 
+    | DIV t f { printf(" / "); } 
     | f
     ;
 f:
